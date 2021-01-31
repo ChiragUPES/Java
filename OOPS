@@ -1,1 +1,27 @@
+OOP's (Object Orientd Programming)
+It is a programming paradigm means way of doing things. 6 main pillars of OOP are Class,Object,Inheritance,Polymorphism,Abstraction,Encapsulation.
+Small Talk is truely oop language.
+So OOP is a methodology to design a program using classes and object.
+
+Object->        instance of class. means real world entities such as dog,cat etc. 
+
+Class ->        collection of objects. It is not real world entity. It is just a prototype from which you can create an individual object.For example animal is class.
+
+Inheritance->   When one object acquires all the properties and behaviour of a parent object is called inheritance.
+                It provides code reusability.
+
+Polymorphism->  If one task is performed in a different ways it is known as polymorhism. For example to convince the coustmer differently. Another example like speaking
+                something like dog barks and cat meows.
+                Over-Loading and Over-riding concept is there.
+Abstraction->   Hiding internal details and showing functionality only known as abstraction.For example phone call , we dont know internal processing of it.
+
+Encapsulation-> Process of Grouping datamembers and corresponding method into a sinhle unit is Encapsulation. Every java class is an example of encapsulation. For 
+                example if there is a student it has name,age,roll_no, marks. Also he can do study, dance. So, all these things into an single class is encapsulation.
+                Encapsulation=Data-hiding+ abstraction.
+                So, if any data follows data hiding and abstraction it is encasulation.
+                How we can achieve it?-> declare data member as a private  and use it n the getter and setter method.And that methods can be access through GUI By which 
+                we can have directly access to the method. So making private(Data hiding) and using gui(Abstraction) both we can achieve encapsulation.
+                Advantages: 1) Security     2)Maintaining easy      
+                Disadvantage: 1) Performance goes down as for every data member we need to provide getter and setter method.
+
 
