@@ -1,1 +1,18 @@
-
+String vs String Buffer:                      String                                                String Buffer
+                                                                                  
+                            1) Strings are immutable.                             |   1) String Buffer are mutable
+                            2) Means once we created string object we are not     |   2) means if we create an object than we can apply changes in that
+                               allowed to perfrom any changes in that object.     |
+                               And if we apply any changes in that string new     |
+                               object will be created but we are not allowed      |
+                               assign any reference variable after applying       |
+                               changes. So, acts as a garbage.                    |
+                            3) Example String s=new String("Chirag");             |    3) Example->   StringBuffer sb=new StringBuffer("Chirag");
+                                              s.concat("Goel");                   |                   sb.append("Goel");
+                                              System.out.println(s);              |                   System.out.println(sb);
+                                                                                  |         
+                                       Output->                                   |         Output->  sb->  ChiragGoel
+                                                s-> Chirag                        |
+                                                    ChiragGoel                    |
+                             
+                             4)                                                 |
