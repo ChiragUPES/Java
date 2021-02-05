@@ -14,5 +14,123 @@ String vs String Buffer:                      String                            
                                        Output->                                   |         Output->  sb->  ChiragGoel
                                                 s-> Chirag                        |
                                                     ChiragGoel                    |
-                             
-                             4)                                                 |
+                            4) equals method is overridden acts as content        |     4) equals method is not overriden. So acts as reference comparison.
+                               comparison.                                        |                 
+                                                                                  |     
+                            5) In String,SCP concept is there(Reusability of      |     5) No SCP concept. So  no reusability of object.
+                               same object means we can use the same object       |        Every object has seperate area.
+                               which is present in it. And if it is not present   |
+                               than new object will be created.                   |                 
+
+
+
+
+
+== v/s equals :               ==   ->   It is refernce comparison. If both are pointing to same object than it will return true.
+                              equals->  equals is a method in object class which is also for reference comparison.
+                                        In string class, equals method is overriden for content comparison. But in string Buffer acts as a reference comparison.
+                                                                                
+                              String s1=new String("durga");                      |     StringBuffer sb1=new StringBuffer("durga");
+                              String s2=new String("durga");                      |     StringBuffer sb2=new StringBuffer("durga");
+                              System.out.println(s1==s2);       // false          |     System.out.println(sb1==sb2);   //false
+                              System.out.println(s1.equals(s2));  // true         |     System.out.println(sb1.equals(sb2));    // false
+                              
+                              ==-> refernce comparison
+                              equals-> in string class ->content compression 
+                                        in string buffer-> refernce comparison.
+            (String Literals)              
+String s=new String("Chirag"); v/s String s="durga";  
+
+Note:   1)In Heap-> using new keyword object is created in heap memory or for any run time operation change value go into heap values.
+        2)In SCP-> for every string literals,one object is created in SCP(String Pool Constant) area. But it will check wheteher that object is present or not. 
+                   If it is present than no new object will be created the same object will be used otherwise new object is created.
+                   So need of SCP is to use the same object for future purpose.
+  
+                                    using new Keyword                                       Sting s="Durga";
+                                                                                  |     
+                          1)  Here, two objects are created. So when we use new   |   1) only one object is created in SCP area.
+                              operator a new object is created at heap area.      |   
+                          
+
+Ques1) How many objects are created in heap/SCP area.
+        String s1=new String("durga");
+        String s2=new String("durga");
+        
+        String s3="durga";
+        String s4="durga";
+                                        
+                                          Heap      |   SCP  
+                                                    |
+                                   s1-> durga       |   s1-> durga <-(s2,s3,s4)
+                                   s2-> durga       |         
+
+Ques2) String s=new String("durga");
+       s.concat("software");
+       s=s.concat("solutions");
+                        
+                                      Heap            |    SCP
+                                    s-X-> ("durga")   |    durga 
+                                    durgasoftware     |    software
+                                  s->  durgasolutions |    soltuions          
+
+Ques3) String s1=new String("spring");
+       s1.concat("Fall");
+       String s2=s1.concat("winter");
+       s2.concat("summer");
+       System.out.println(s1);
+       System.out.println(s2);
+                          
+                                    Heap                    SCP
+                                  
+                                  s1-> spring               s1->spring             
+                                       springFall           fall
+                                  s2-> springwinter         winter
+                                       springwintersummer   summer
+
+Ques4) String s1=new String("You can not change me")
+       String s2=new String("You can not change me")
+       
+       System.out.println(s1==s2);            // false(== > reference pointer)
+       
+       String s3="You can not chnage me";
+       System.out.println(s1==s3);            // false
+       
+       String s4="you can not change me";
+       System.out.println(s3==s4);            //true
+       
+       String s5="you can not"+"change me";
+       System.out.println(s4==s5);            //true(compile time par change to heap par nhi bnega)
+       
+       String s6="you can not";             // Imp point
+       String s7=s6+"change me";
+       System.out.println(s4==s7);              // false
+       
+       final string s8="you can not";       // due to final compile time par s9="you can not chnage me"   
+       String s9=s8+"change me";
+       System.out.println(s4==s9);          //true
+            
+                                        Heap                                          SCP
+                                                                                
+                              s1->"You can not chnage me"                      "You can not change me"<-(s3,s4,s5,s9)
+                              s2->"You can not chnage me"                      s6-> "you can not"<-(s8)
+                                                                                   "change me"
+                               s7-> "You can not change me" 
+
+Advantages of SCP->   1) same reference can be refrenced with multiple objects.So same object can be used multiple time instead of creating new object.
+                      2) So, memory utilization is improved.
+
+Problem with SCP->    Lets take an example of voting system for understanding the problems in SCP. suppose there are 'n' voters in the city hyderabad. 
+                      So, city hyderabad is same for all the voters. So , we can use the same object multiple time according to SCP.But what if suppose one of
+                      the voter change the city from hyderabad to lucknow. And if we change the value it will also refleced in the remaining voters to luknow
+                      as they are also referenced to it. So , that's why immutable concept occur.
+                      So, if we want to chnage the object than new object is created but change in that is not allowed. So, that user new object is created as 
+                      Lucknow and that user refernced to that value.
+
+Ques? Why Strings in java is immutable? Beacuse of SCP concept.
+Ques? Why String are mutable but String buffer is immutable? String is most commonly used in java. So that is why they provided special management for string but we 
+      use string Buffer very rarely that's why memory management is not required in string buffer.
+Ques?       
+
+
+
+
