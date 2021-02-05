@@ -1,5 +1,7 @@
 String-> String is a sequence of character.
 Range of byte-> -128 to 127
+immutable-> means once we created any object we are not allow to change its content. If we are trying to do any changes, a new object will be created with that changes.
+
 String vs String Buffer:                      String                                                String Buffer
                                                                                   
                             1) Strings are immutable.                             |   1) String Buffer are mutable
@@ -23,7 +25,9 @@ String vs String Buffer:                      String                            
                                same object means we can use the same object       |        Every object has seperate area.
                                which is present in it. And if it is not present   |
                                than new object will be created.                   |                 
-
+                                                                                  |
+                            6) Used when the value is same. If the value is       |     6) used where the object is changing.
+                              changing than every time new object will be created |
 
 
 
@@ -118,6 +122,31 @@ Ques4) String s1=new String("You can not change me")
                                                                                    "change me"
                                s7-> "You can not change me" 
 
+Ques5) String s1=new String("durga");
+       String s2=s1.toUpperCase();
+       String s3=s1.toLowerCase();
+       System.out.println(s1==s2);    // false
+       System.out.println(s1==s3);     // true
+       
+                                        Heap                                              SCP
+                                   
+                                   s1-> durga <- s3                                         durga
+                                   s2->DURGA
+
+Ques6) String s1="durga";
+       String s2=s1.toString();
+       String s3=s1.toLowerCase();
+       String s4=s1.toUpperCase();
+       System.out.println(s1==s2);    //false
+       System.out.println(s1==s3);    //false
+       System.out.println(s1==s4);    //false
+                            
+                                    Heap                                                SCP
+                              durga <-s3                                                      
+                              s4-> DURGA                                              s1-> durga <- s2,s3
+                              
+                                
+
 Advantages of SCP->   1) same reference can be refrenced with multiple objects.So same object can be used multiple time instead of creating new object.
                       2) So, memory utilization is improved.
 
@@ -136,10 +165,51 @@ Ques? In addition to string objects any other object are immutable in java?  Yes
 
 Methods-> isEmpty(),length(),replace(char old,char new),substring(int begin,int end)-(include,exclude),index of(char ch),lastIndexof(),toLowerCase,toUpperCase(), 
           trim()-> remove the extra spaces at the beginning or end of the string.
-                    Example: s="Durga Soft"
+                   Example: s="Durga Soft"
                              System.out.println(s.trim().length());
                              Output-> 10.
                              So,trim is not going to remove middle blank spacs. Only end or start blank spaces are remove.
+                             
+Final v/s immutable:                  Final-> related to reference variable
+                                      Immutability-> related to object
+                                      For example if we want to make stringbuffer as a immutable.
+                                      class Test
+                                      {
+                                        public static void main(String[] arg)
+                                        {
+                                            final StringBuffer sb=new StringBuffer("durga");
+                                            sb.append("software");
+                                            System.out.println(sb);   // durgasoftware
+                                            sb=new StringBuffer("ravi");  // compile time error
+                                        }
+                                      }
+                                      // It will compile fine and gives o/p-> durgasoftware. So, using final variable we can not achieve mutability. The only purpose 
+                                          of final varibale is that we can not assign this variable 'sb' to new object but we can perform changes in it.
+                                          So, using final we can not get immutability concept.
+                                       
+                                     So, practiclly we can not make string buffer as immutable as it is done for purpose of mutability. So we can do changes in the 
+                                     source code of string buffer only than we can achieve it.
+
+Note: String is used where the content is fixed. No need to change it but when we need to change the content used string buffer.
+In string length is same capacity is also same.
+But in stringbuffer capacity are different. default size is 16 character.
+                   1)     New Capacity=(current capacity+1)*2.
+                   2)     sb.capacity()
+                   3)     If we know the initial capacity-> StringBuffer sb=new StringBuffer(int i);
+                                                                                          (1000);
+                                                          System.out.println(sb.capacity());  //1000
+                   4)     StringBuffer sb=new StringBuffer("durga");
+                          System.out.println(sb.capacity()) 
+                          Ans is -> (5 ,16 ,80 ,21). Answer is 21.(S.length()+16)
+
+Methods of StringBuffer: length,capacity,charAt(int index),setCharAt(int index,char newchar), append(String s), insert(int index,String s),delete(int begin,int end)
+                           
+                                          
+        
+                              
+
+                             
+                             
                              
 
 
