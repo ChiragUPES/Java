@@ -1,3 +1,5 @@
+String-> String is a sequence of character.
+Range of byte-> -128 to 127
 String vs String Buffer:                      String                                                String Buffer
                                                                                   
                             1) Strings are immutable.                             |   1) String Buffer are mutable
@@ -129,7 +131,17 @@ Problem with SCP->    Lets take an example of voting system for understanding th
 Ques? Why Strings in java is immutable? Beacuse of SCP concept.
 Ques? Why String are mutable but String buffer is immutable? String is most commonly used in java. So that is why they provided special management for string but we 
       use string Buffer very rarely that's why memory management is not required in string buffer.
-Ques?       
+Ques? In addition to string objects any other object are immutable in java?  Yes, all the wrapper class object are also immutable.
+
+
+Methods-> isEmpty(),length(),replace(char old,char new),substring(int begin,int end)-(include,exclude),index of(char ch),lastIndexof(),toLowerCase,toUpperCase(), 
+          trim()-> remove the extra spaces at the beginning or end of the string.
+                    Example: s="Durga Soft"
+                             System.out.println(s.trim().length());
+                             Output-> 10.
+                             So,trim is not going to remove middle blank spacs. Only end or start blank spaces are remove.
+                             
+
 
 
 
