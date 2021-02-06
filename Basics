@@ -51,9 +51,104 @@ this vs super->       this : represent the current instance of the class.
 Object class is the parent class of all the classes in java.
 toString()-> method of object class in java.
              takes object as an argument.
-             used when we retrun string representaion of object.
-             returns the hashcode of object.
+             used when we retrun string representaion of object and when we know about the reference of the object.
+             System.out.println(mb);  //mb is object.
+             Internally it will gives as mb.toString() by the compiler. to retrin the reference value
 
+Can we overload main function? Yes, but jvm calls only that which has string as an argument.
+
+Interface is the blueprint of the class. used to achieve total astraction and multiple inheritance. means all the methods in the interface are declared with 
+empty body and the class that implements the interface must have to declare all the methods present in the interface.
+class -> extends -> class
+class-> implements -> interface
+interface -> extends -> interface
+ 
+abstract vs interface:    abstract-> can have both abstract as well as non abstarct methods
+                                     does not support multiple inheritance
+                                     abstract keyword is used
+                          interface-> all methods are abstract.
+                                      supports multiple inheritance
+                                      interface keyword is used.
+
+packages-> group of similar types of classes, interfaces 
+           Advantages-> easily maintained.
+                        remove naming collision.
+
+Exception handiling -> errors which disrupts the normal flow of execution.
+                       occurs at the run time rather than compile time .
+
+Why we use Exceptional handling? If in between of the program exception occur. So normal flow terminates. So, it avoid it use exceptional handling.
+Exceptions are the types of error that may occur in between the program.
+  Throwable class is the root class of java exception.
+                                    
+                                                                    
+                                                                    Throwable
+                                                                /               \
+                                                              Exception         Error
+                                                                |                   |
+                                                            IO exception            Stack overflow
+                                                            Class not found
+                                                            Null pointer 
+                                                            Array Outof bound
+                                                            
+Types of exceptions 1) Checked-> at compile time
+                    2) Unchecked-> at runtime exception.Example Null pointer Exception
+                    3) Error-> irrecoverable.
+Handle by try,catch. Finally block is used to execute the important code of program. It is executed wheteher an exception occur or not.
+multiple catch block is allowed. But at a time one is executed.
+Whenever the exception arrises JVM will check whether that exception is handeled or not.
+
+throw-> handle one exceptions at a time
+throws-> can means this line of code can give multiple exception at a time.
+
+jar file is collection of .class files
+Method Chaining -> is caliing different method in a single line. but return type must be same
+
+Inner Classes-> decalre a class inside the class.
+                Used-> For ex. Withour engine their is no class and without university there is no epartment. So without existing outer class their is no chance
+                of existing inner class.
+                
+
+Wrapper Class-> converting a datatype into object.
+                Example jdk 1.4 does not allow datatype. it only allow object to store in stack.
+                Autoboxing-> Converting a primitive value to wrapper object.  Method used valueof();
+                AutoUnboxing-> Converting wrapper to primitive.   Method used intValue();
+                For every primitive class we have wrapper class.
+                
+                
+final vs finally vs finalize
+             final-> keyword
+                    value can not be modify
+                    
+             finally-> block executed whether exception occur or not.
+             finalize -> method called by garbage collector when garbage collector determines that there are no more reference to that object.
+
+Without main function we can compile the code but can not run it.
+
+Threads allow program to operate more efficiently by doing multiple things at a same time.
+executed by extend thread class or implementing runnable interface present in java.lang package .
+Thread Scheduler is a part of JVM which defines in which order thread will execute.
+If we call directly t.run() method than it is just like a normal method call. So, no seperate thread will be generated. But if we call t.start() tha it will register
+thread to the thread scheduler and perform all the other mandatory activity and than call run method.
+
+yield()-> to give the chance of the waiting thread which are having the same priority.
+join()-> if the thread wants to wait for the completion of another thread than we used join method.
+sleep()-> if a thread dont want to perform any activity for a particular amount of time. Example slide rotating of ppt for 2 min.
+
+Synchronization-> used for method or block.
+                  If multiple threads are operating on a java object than their is a chance of data inconsistency.
+                  
+notify vs notify-all : For axample if a thread is in the waiting state and we have to give the nptification to the thread than we use this concept.
+                      notify -> used to give notification to one thread only.
+                      notifyall -> used to give notification for multiple threads.
+                      
+Deadlock-> If the two threads wait for each other forever than it is called deadlock. Occurs duw to synchronize keyword.
+Deadlock vs startvation. (Deadlock means waiting for the resorce but it nevers end. While starvation is waiting for particular time and ens at a certain time.)
+
+Daemon threads-> threads which is executing in the background like garbage collector. 
+
+
+             
 
 
 
