@@ -1,0 +1,8 @@
+SDLC-> Software Development life cycle.
+Used by the software company to design,deveop and test high quality software. These are divided into stages.
+1) Planning->     In it the maximum information we can gather about the project is done. Which is further used to plan the software.
+2) Requirement->  This is done through SRS(Software Requirement Specification) document which consists of all the requirement during the project
+3) Designing ->   A prototype will be made and show to the client that how the final product will look like. Atomic tool i have used.
+4) Building->     At this stage we start the coding part and develop the software
+5) Testing ->   This is the testing phase in which we check wheter all the functionalites are working fine or not.
+6) Deployment phase-> End result will be handed over to client.
