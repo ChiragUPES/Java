@@ -26,5 +26,8 @@ Encapsulation-> Process of Grouping datamembers and corresponding method into a 
                 we can have directly access to the method. So making private(Data hiding) and using gui(Abstraction) both we can achieve encapsulation.
                 Advantages: 1) Security     2)Maintaining easy      
                 Disadvantage: 1) Performance goes down as for every data member we need to provide getter and setter method.
+                
+if one method is abstract than class is also abstract.
+
 
 
