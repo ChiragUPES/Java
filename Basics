@@ -1,0 +1,79 @@
+C++ vs java->       C++-> platform dependent
+                          supports multiple inheritance
+                          call by value and call by reference both can be called
+                    
+                    Java-> platform independent.
+                           does not supports multiple inheritance.
+                           call by referenced is not allowed as we can unot used pointers in java externally.
+
+JDK,JVM,JRE->     JDK(Java Development Kit) environment used for developing java application. (JRE+tools)
+                  It includes JRE(Java Run time environment), javac(java Compiler) and other tools needed for development.
+                  
+                  JRE-> environment to run java program. Used by end users who only run the java program.
+                  JVM(Java Virtual Machine)-> Whenever we run java program , it is the responsibilty of jvm to execute a java program line by line. So, it acts as 
+                                              a interpreter.
+
+.Java file conatains the source code.
+.class class contians the byte code (Machine level Code).
+How java program executes?
+Class Loader-> Loads all the necesaary files needed for execution of program.
+Byte Code Verifier-> checks all the system requirement whether this program is suitable for that environment or not.
+Interpreter-> convert the code so that machine can easily understand the code.
+Runtime-> Code will executed and gives the expected output.
+
+final vs static
+                  final-> final values just means that valu can not be chnaged. And it means that we can not chnage the reference value of the object.
+                  static-> means once assign any variable static we can easily access with in the whole class. And can not crete the object of class for using it.
+
+Why java is not pure oop? in pure oop, everything we treat inside the program as object. But in java we can use primitive datatype.
+
+Constructor is used to inialize the value of object.
+Types of constructor-> 1) Default:  If there is no constructor in class compiler will automatically creates the constructor.
+                                    Default construtor is used to provide the default value to the object like 0,null depending upon the type.
+                       2) Zero Parameter: User defined constructor having no argumnet.
+                       3) Parametrized constructor: having paramter. used to provide the different value to distinct objects.
+
+Constructor Overloading-> Having more than one constructor with the different parameter list.
+
+Heap memory vs stack memory:  Memory space allocated to the program to execute.Every time when we create a object that value is stored in heap memory. And the refernce
+                              of that variable is stored in stack memory.
+                              So stack memory is allocated to contigious memory allocation while in heap it is random order.
+
+Why java not supports mutiple inheritance? Due to amiguity error. And we can achieve multiple inhertiance using interfaces.
+
+this vs super->       this : represent the current instance of the class.
+                             so, this is used to call the default constructor of same class.
+                             this keyword is used to the same class object.
+                      super : represents the current instance of parent class.
+                              so, super is used to call the default constructor of parent class.
+                              super keyword is used to access the parent class object.
+                              
+Object class is the parent class of all the classes in java.
+toString()-> method of object class in java.
+             takes object as an argument.
+             used when we retrun string representaion of object.
+             returns the hashcode of object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
