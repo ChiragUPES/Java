@@ -15,6 +15,9 @@ Polymorphism->  If one task is performed in a different ways it is known as poly
                 Over-Loading and Over-riding concept is there.
 Abstraction->   Hiding internal details and showing functionality only known as abstraction.For example phone call , we dont know internal processing of it.
 
+Data Hiding->   In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class. 
+                Therefore, it is also known as data hiding
+
 Encapsulation-> Process of Grouping datamembers and corresponding method into a sinhle unit is Encapsulation. Every java class is an example of encapsulation. For 
                 example if there is a student it has name,age,roll_no, marks. Also he can do study, dance. So, all these things into an single class is encapsulation.
                 Encapsulation=Data-hiding+ abstraction.
