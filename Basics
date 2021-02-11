@@ -105,8 +105,8 @@ jar file is collection of .class files
 Method Chaining -> is caliing different method in a single line. but return type must be same
 
 Inner Classes-> decalre a class inside the class.
-                Used-> For ex. Withour engine their is no class and without university there is no epartment. So without existing outer class their is no chance
-                of existing inner class.
+                Used-> For ex. Without engine their is no car available and without university there is no department. So without existing outer class their is no 
+                chance of existing inner class.
                 
 
 Wrapper Class-> converting a datatype into object.
@@ -131,6 +131,7 @@ Thread Scheduler is a part of JVM which defines in which order thread will execu
 If we call directly t.run() method than it is just like a normal method call. So, no seperate thread will be generated. But if we call t.start() tha it will register
 thread to the thread scheduler and perform all the other mandatory activity and than call run method.
 
+Methods to prevent thread execution->
 yield()-> to give the chance of the waiting thread which are having the same priority.
 join()-> if the thread wants to wait for the completion of another thread than we used join method.
 sleep()-> if a thread dont want to perform any activity for a particular amount of time. Example slide rotating of ppt for 2 min.
@@ -138,11 +139,23 @@ sleep()-> if a thread dont want to perform any activity for a particular amount 
 Synchronization-> used for method or block.
                   If multiple threads are operating on a java object than their is a chance of data inconsistency.
                   
-notify vs notify-all : For axample if a thread is in the waiting state and we have to give the nptification to the thread than we use this concept.
+notify vs notify-all : For axample if a thread is in the waiting state and we have to give the notification to the thread than we use this concept.
                       notify -> used to give notification to one thread only.
-                      notifyall -> used to give notification for multiple threads.
-                      
-Deadlock-> If the two threads wait for each other forever than it is called deadlock. Occurs duw to synchronize keyword.
+                      notifyall -> used to give notification for multiple threads
+
+Life cycle of thread-> 
+thread.yield->
+            
+            t.start()                     if Thread scheduler 
+                                          alocates processor
+New born  --------------> Ready/Runnable ------------------------> Running 
+                                ^                                     |
+                                |                                     |
+.                               |        if thread.yield()            |
+                                |_____________________________________|     
+                                
+
+Deadlock-> If the two threads wait for each other forever than it is called deadlock. Occurs due to synchronize keyword.
 Deadlock vs startvation. (Deadlock means waiting for the resorce but it nevers end. While starvation is waiting for particular time and ens at a certain time.)
 
 Daemon threads-> threads which is executing in the background like garbage collector. 
