@@ -1,2 +1,8 @@
+Collection in java is a framework that provides an architecture to store and manipulate a groups of objects. Thorugh collection we can achieve all the operation that 
+can be done on data such as searching,sorting,insertion manipulation,deletion.
+It contains both interfaces and classes.
+Framework-> that provides the readymade architecture
+java.util contains all the classes and interface of collection framework.
+
 In Set we can not add duplicates eleement.
 In hashmap we add value in key, value pair.
