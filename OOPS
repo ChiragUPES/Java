@@ -1,11 +1,17 @@
 OOP's (Object Orientd Programming)
-It is a programming paradigm means way of doing things. 6 main pillars of OOP are Class,Object,Inheritance,Polymorphism,Abstraction,Encapsulation.
+It is a methododlogy to design a program using classes and object.
+It simplifies software development and maintence by providing some concepts.
+6 main pillars of OOP are Class,Object,Inheritance,Polymorphism,Abstraction,Encapsulation.
 Small Talk is truely oop language.
 So OOP is a methodology to design a program using classes and object.
 
-Object->        instance of class. means real world entities such as dog,cat etc. 
+Object->        instance of class. means real world entities such as dog,cat etc. It contains space in memory.
+                Has three characterstics:state,behavior,identity. States represents data,behavior represents functionilty and identity represents unique id using
+                which JVM will identify the object. Example-> Pen is an object. Its name is Reynold, color is white.So this is state. It is used to write. So writing
+                is behavior.
 
-Class ->        collection of objects. It is not real world entity. It is just a prototype from which you can create an individual object.For example animal is class.
+Class ->        Collection of objects. It is not real world entity. It is just a prototype from which you can create an individual object.For example animal is class.
+                It contains methods, blocks
 
 Inheritance->   When one object acquires all the properties and behaviour of a parent object is called inheritance.
                 It provides code reusability.
@@ -18,7 +24,7 @@ Abstraction->   Hiding internal details and showing functionality only known as 
 Data Hiding->   In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class. 
                 Therefore, it is also known as data hiding
 
-Encapsulation-> Process of Grouping datamembers and corresponding method into a sinhle unit is Encapsulation. Every java class is an example of encapsulation. For 
+Encapsulation-> Process of Grouping datamembers and corresponding method into a single unit is Encapsulation. Every java class is an example of encapsulation. For 
                 example if there is a student it has name,age,roll_no, marks. Also he can do study, dance. So, all these things into an single class is encapsulation.
                 Encapsulation=Data-hiding+ abstraction.
                 So, if any data follows data hiding and abstraction it is encasulation.
@@ -26,6 +32,68 @@ Encapsulation-> Process of Grouping datamembers and corresponding method into a 
                 we can have directly access to the method. So making private(Data hiding) and using gui(Abstraction) both we can achieve encapsulation.
                 Advantages: 1) Security     2)Maintaining easy      
                 Disadvantage: 1) Performance goes down as for every data member we need to provide getter and setter method.
+Coupling refers to knowledge or depenedency on another class. If a class has a detail information about the another class. Than there is a strong coupling.
+                For weaker coupling we can use interfaces because there is no implementation of the methods.
+Association refers to the relationship between the objects. One object can be associated with one object or many objects. There can be 4 types of association bw the
+objects. These are: 1 to 1.
+                    1 to Many.
+                    Many to one.
+                    Many to Many.
+                    Let us understand with real life example. Like one country has one PM.So, one object can be mapped only with one object.A PM can have many 
+                    ministers.This is one to many. We can also say that many ministers can have one PM.(Many to one.). Many ministers have many departments.(Many
+                    to many).
+Composition is also way to achieve Association.The composition refers a state when one object contains other objects as a part of its state. There is a strong 
+                relationship between object.    
+
+Advantages of OOPS over Procedural->
+1) OOPS make development and maintainece easier.
+2) OOPs provides data hiding where as in procedural language global data can be accessed from anywhere.
+Object based programming which follows all the features of OOPS except inheritance. Object based is Javascript.
+
+Instance Variable in java->   1) created inside the class but outside the method.
+                              2) Does not get memory at compile time.
+                              3) Gets memory at run time when object is created.
+New Key word in java->  Means to create an object new keyword is used.
+                        It is used to allocate a memory at runtime. 
+                        All object get memory in the heap area.     
+                        
+Class and object example-> 
+class Student{    
+ int id;// instance variable  
+ String name;  
+ 
+ public static void main(String args[]){    
+  Student s1=new Student();//creating an object of Student  
+  //Printing values of the object  
+  System.out.println(s1.id);//accessing member through reference variable  
+  System.out.println(s1.name);  
+ }  
+}       
+
+There are 3 ways to initialize object in Java. By reference variable, By method, By constructor
+There are many ways to create an object in java. They are: By new keyword, By newInstance() method, By clone() method, By deserialization,By factory method etc.
+Anonymous simply means nameless. An object which has no reference is known as an anonymous object. It can be used at the time of object creation only.
+For example->    
+    class Calculation{  
+     void fact(int  n){  
+      int fact=1;  
+      for(int i=1;i<=n;i++){  
+       fact=fact*i;  
+      }  
+     System.out.println("factorial is "+fact);  
+    }  
+    public static void main(String args[]){  
+     new Calculation().fact(5);//calling method with anonymous object  
+    }  
+    }  
+
+Constructor: Block similar to the method.
+             It is used to initialize the value of object.
+             
+    
+
+
+    
                 
 if one method is abstract than class is also abstract.
 
