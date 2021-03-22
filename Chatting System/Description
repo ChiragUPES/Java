@@ -1,0 +1,14 @@
+Language used-> Java
+Concept used-> Swing and Java Networking(Socket Programming)
+Description:
+This is a simple chatting or server-client application. In which one is a server and other is client. They can communicate with each other.
+So one to one communication is there.
+Framing is done using swing and socket prgraming(concept of network programming) is used for communication.
+
+Coding:
+inside the constructor ,I am doing the frame coding.
+Jframe is the class
+And swing is the packkage name.
+Function : Setsize is the function inside the Jframe class. And we have to use setVisible(true  ) function to see them on screen. Because setsize create the frame but 
+not shown in the screen.
+
