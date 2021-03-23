@@ -12,3 +12,6 @@ And swing is the packkage name.
 Function : Setsize is the function inside the Jframe class. And we have to use setVisible(true  ) function to see them on screen. Because setsize create the frame but 
 not shown in the screen.
 
+
+Socket Programming is used for communication between the different applications.   
+
