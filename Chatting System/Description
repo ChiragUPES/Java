@@ -15,3 +15,6 @@ not shown in the screen.
 
 Socket Programming is used for communication between the different applications.   
 
+Talking about the modification part, if client is typing than the staus will change from Active now to typing as seen in whatsapp.
+So, for changing the statis i have used timer class here. 
+
