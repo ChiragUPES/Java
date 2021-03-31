@@ -1,0 +1,13 @@
+When we run the application, inital there is a login page appears which has thre option. first is login, second is signup and third one is forget password.
+So, this project is split into catgeories.
+1) is of add books. it takes the basic input like book name ,author name,which edition it is, price. And click on add button. and it contains the bookid,
+which is the primary key and with this bookid we can easily search this book.
+2) Second is add tudent. If we want to give access to student so we need to add the student.
+3) Issue Book-> We can isseud the book to particluar student.
+4) Return Book-> Student can return the book
+5) Statistics-> We can see the data of issued book and returned book from the library.
+
+Description:
+Libraray Management System is a project which aims in developing a computerized system to maintain all the daily work of a library. The system helps both the 
+student and the library manager to keep a contant track of all the books available in the library. It allows both the admin and the student to search for the 
+desired book.  
