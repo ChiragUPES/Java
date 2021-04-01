@@ -1,0 +1,10 @@
+Frame
+JLabel-> UserName
+JTextField
+JPasswordField
+JButton
+JPanel-. is much like div in html. for division.
+
+
+setBackground is a function in jframe
+setBound function is used to put the elements on frame. 
