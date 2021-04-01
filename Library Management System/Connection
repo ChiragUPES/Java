@@ -3,12 +3,13 @@ import java.sql.*; // is a package in which there is interface-> statement inter
 Before jdbc, we use odbc. But problem is that they are written in C. ANd platform dependent. +less secure. 
 
 5 steps of databse connectivity->
-Register the drivers.
-create connection
-create statement
+Register the drivers.       Class.forName();
+create connection           Drivermanager.getConnection
+create statement            
 execute query. (we execute query with help of statement)
 close con.
 
 
 Prepared Statement is the sub interface of statement interface. It is used to execute a parametrized query. For ex-> sql="Select --- where name=?";
+setsetring method is used to set the parametrzied value.
                                                                              
